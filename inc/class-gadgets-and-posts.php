@@ -131,6 +131,7 @@ class Gadgets_And_Posts {
 				'id'        => get_the_ID(),
 				'title'     => get_the_title(),
 				'thumbnail' => get_the_post_thumbnail(get_the_ID(), 'large' ),
+				'thumbnail_square' => get_the_post_thumbnail(get_the_ID(), 'gadget-square' ),
 				'content'   => apply_filters( 'gadget_content', get_post_field( 'post_content', get_the_ID() ) )
 			);
 		}

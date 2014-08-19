@@ -3,12 +3,12 @@
  * Plugin Name: Gadgets
  * Plugin URI: https://github.com/m-e-h/gadgets
  * GitHub Plugin URI: m-e-h/gadgets
- * Description: A plugin for managing tabs, toggles, accordions, sliders, media objects, and other types of content on a WordPress install.
+ * Description: A plugin for managing tabs, toggles, cards, accordions, sliders, media objects, and other types of content on a WordPress install.
  * Version: 0.1.0
  * Author: Marty Helmick
  *
  * A plugin for managing "gadgets", which is just an arbitrary name given to content for displaying 
- * in tabs, toggles, accordions, sliders, media objects, and other types of posts and gadgets users want on their sites.  
+ * in tabs, toggles, cards, accordions, sliders, media objects, and other types of posts and gadgets users want on their sites.  
  * This plugin is a reimagining of how these types of things should by handled by themes.  The plugin 
  * handles the content for portability.  The theme handles the display of the content.  It also gives 
  * near unlimited potential for "gadget" content, only limiting the user by what they can add to the 
@@ -96,6 +96,7 @@ final class Gadgets_Load {
 		require_once( GADGETS_DIR . 'inc/class-gadgets-and-posts.php' );
 		require_once( GADGETS_DIR . 'inc/class-gadgets-and-tabs.php' );
 		require_once( GADGETS_DIR . 'inc/class-gadgets-and-toggles.php' );
+		require_once( GADGETS_DIR . 'inc/class-gadgets-and-cards.php' );
 		require_once( GADGETS_DIR . 'inc/class-gadgets-and-accordions.php' );
 		require_once( GADGETS_DIR . 'inc/class-gadgets-and-sliders.php' );
 		require_once( GADGETS_DIR . 'inc/functions.php' );

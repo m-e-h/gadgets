@@ -29,11 +29,26 @@ function gadgets_get_allowed_types() {
 	$allowed_types = array(
 		'tabs'      => __( 'Tabs',      'gadgets' ),
 		'toggle'    => __( 'Toggle',    'gadgets' ),
+		'card'      => __( 'Card',    'gadgets' ),
 		'accordion' => __( 'Accordion', 'gadgets' ),
 		'slider' 		=> __( 'Slider', 'gadgets' )
 	);
 
 	return apply_filters( 'gadgets_allowed_types', $allowed_types );
+}
+
+
+add_filter('image_size_names_choose', 'gadgets_show_image_sizes');
+
+function gadgets_add_image_sizes() {
+    add_image_size( 'gadget-square', 500, 500, true );
+}
+add_action( 'init', 'gadgets_add_image_sizes' );
+ 
+function gadgets_show_image_sizes($sizes) {
+    $sizes['gadget-square'] = __( 'Gadget Square', 'gadgets' );
+ 
+    return $sizes;
 }
 
 /**
@@ -81,6 +96,10 @@ function gadgets_get_gadgets( $args = array() ) {
 		/* Toggle. */
 		elseif ( 'toggle' === $type )
 			$gadgets_object = new Gadgets_And_Toggles( $args );
+
+		/* Card. */
+		elseif ( 'card' === $type )
+			$gadgets_object = new Gadgets_And_Cards( $args );
 
 		/* Slider. */
 		elseif ( 'slider' === $type )

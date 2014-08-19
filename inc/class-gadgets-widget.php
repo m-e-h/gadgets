@@ -23,7 +23,7 @@ class Gadgets_Widget extends WP_Widget {
 		/* Set up the widget options. */
 		$widget_options = array(
 			'classname'   => 'gadgets',
-			'description' => esc_html__( 'Tabs, toggles, accordions, sliders, media objects, sliders, posts, gadgets, and all that jazz.', 'gadgets' )
+			'description' => esc_html__( 'Tabs, toggles, cards, accordions, sliders, media objects, sliders, posts, gadgets, and all that jazz.', 'gadgets' )
 		);
 
 		/* Set up the widget control options. */
