@@ -4,7 +4,7 @@
  * Plugin URI: https://github.com/m-e-h/gadgets
  * GitHub Plugin URI: m-e-h/gadgets
  * Description: A plugin for managing tabs, toggles, cards, accordions, sliders, media objects, and other types of content on a WordPress install.
- * Version: 0.1.0
+ * Version: 0.1.4
  * Author: Marty Helmick
  *
  * A plugin for managing "gadgets", which is just an arbitrary name given to content for displaying 
