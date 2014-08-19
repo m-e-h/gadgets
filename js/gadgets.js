@@ -38,6 +38,12 @@ jQuery( document ).ready(
 			}
 		);
 
+		/* Card. */
+  jQuery(".fade-more").click(function(){
+    jQuery( this ).parents(".card-single").toggleClass("card-open");
+  });
+
+
 		/* Accordion. */
 		jQuery( '.gadgets-accordion .gadget-content' ).hide();
 		jQuery( '.gadgets-accordion .gadget-content:first-of-type' ).show();
