@@ -46,7 +46,7 @@ class Gadgets_And_Sliders extends Gadgets_And_Posts {
 
 				// $output .= '<li class="gadget-title">' . $gadget['title'] . '</li>';
 
-				$output .= '<li class="slide-thumb">' . $gadget['thumbnail'] . '</li>';
+				$output .= '<li data-thumb="' . $gadget['thumb_url'] . '">' . $gadget['thumbnail'] . '</li>';
 
 				// $output .= '<div class="gadget-content">' . $gadget['content'] . '</div>';
 			}

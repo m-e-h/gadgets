@@ -34,20 +34,22 @@ class Gadgets_And_Cards extends Gadgets_And_Posts {
 		if ( !empty( $gadgets ) ) {
 
 			/* Open the card wrapper. */
-			$output .= '<div class="gadgets gadgets-card">';
+			$output .= '<div class="gadgets image-grid gadgets-card">';
 
 			/* Loop through each of the gadgets and format the output. */
 			foreach ( $gadgets as $gadget ) {
 
-				$output .= '<div class="card-single">';
+				$output .= '<figure class="effect-sadie">';
 
-				$output .= '<div class="card-thumb">' . $gadget['thumbnail_square'] . '</div>';
+				$output .= $gadget['thumbnail_square'];
 
-				$output .= '<div class="card-content-wrap"><h3 class="card-title">' . $gadget['title'] . '</h3>';
+				$output .= '<figcaption><h2 class="card-title">' . $gadget['title'] . '</h2>';
 
-				$output .= '<div class="card-content">' . $gadget['content'] . '</div><a class="fade-more">more </a></div>';
+				$output .= '<p class="imgcard-content">' . $gadget['excerpt'] . '</p>';
 
-				$output .= '</div>';
+				$output .= '<a href="' . $gadget['link'] . '"> View More</a></figcaption>';
+
+				$output .= '</figure>';
 			}
 
 			/* Close the card wrapper. */

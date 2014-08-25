@@ -127,10 +127,17 @@ class Gadgets_And_Posts {
 
 			$loop->the_post();
 
+			
+			$thumb_id = get_post_thumbnail_id();
+			$thumb_url = wp_get_attachment_image_src($thumb_id);
+
 			$this->gadgets[] = array(
 				'id'        => get_the_ID(),
 				'title'     => get_the_title(),
+				'excerpt'   => get_the_excerpt(),
+				'link'      => get_permalink(),
 				'thumbnail' => get_the_post_thumbnail(get_the_ID(), 'large' ),
+				'thumb_url' => $thumb_url[0],
 				'thumbnail_square' => get_the_post_thumbnail(get_the_ID(), 'gadget-square' ),
 				'content'   => apply_filters( 'gadget_content', get_post_field( 'post_content', get_the_ID() ) )
 			);
@@ -150,6 +157,7 @@ class Gadgets_And_Posts {
 	public function get_markup() {
 		return $this->markup;
 	}
+
 
 	/**
 	 * Sets the HTML markup for display.  Expects the $gadgets property to be passed in.

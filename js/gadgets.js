@@ -39,9 +39,25 @@ jQuery( document ).ready(
 		);
 
 		/* Card. */
-  jQuery(".fade-more").click(function(){
+  jQuery(".card-title").click(function(e){
     jQuery( this ).parents(".card-single").toggleClass("card-open");
   });
+
+
+		jQuery( '.card-content' ).hide();
+		jQuery( '.card-title' ).click(
+			function() {
+				jQuery( this ).attr( 'aria-selected', 'true' );
+				jQuery( this ).next( '.card-content' ).slideToggle(
+					'slow',
+					function() {
+						if ( !jQuery( this ).is( ':visible' ) ) {
+							jQuery( this ).prev().attr( 'aria-selected', 'false' );
+						}
+					}
+				);
+			}
+		);
 
 
 		/* Accordion. */
@@ -78,7 +94,8 @@ jQuery( document ).ready(
 
 		/* Slider */
 		      jQuery('.flexslider').flexslider({
-    animation: "slide"
+    animation: "slide",
+    controlNav: "thumbnails"
   });
 
 	}

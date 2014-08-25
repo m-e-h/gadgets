@@ -26,8 +26,8 @@ function gadgets_register_post_types() {
 	/* Set up the arguments for the portfolio item post type. */
 	$args = array(
 		'description'         => '',
-		'public'              => false,
-		'publicly_queryable'  => false,
+		'public'              => true,
+		'publicly_queryable'  => true,
 		'show_in_nav_menus'   => false,
 		'show_in_admin_bar'   => true,
 		'exclude_from_search' => true,
@@ -77,6 +77,7 @@ function gadgets_register_post_types() {
 		'supports' => array(
 			'title',
 			'editor',
+			'excerpt',
 			'thumbnail',
 		),
 
